@@ -2,6 +2,7 @@ import React from 'react'
 
 import Image from 'next/image';
 
+
 export default function Home() {
 
     const homeAPI = {
@@ -113,10 +114,11 @@ export default function Home() {
 
   return (
     <>
-    <div className=' w-full px-9 py-6'>
-        <div className='flex items-center w-full'>
+    <div className='mt-12 w-full px-9 py-6'>
+        
+        <div className='flex items-center gap-5 w-full'>
         <div
-        className='w-[70%] px-3 overflow-x-scroll scroll-smooth scroll-hidden flex items-center gap-6 text-center'
+        className='w-full lg:w-[70%] px-3 overflow-x-scroll scroll-smooth scroll-hidden flex items-center gap-6 text-center'
           
         >
           {homeAPI.stories.map((v, i) => (
@@ -126,7 +128,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className='flex items-center justify-between '>
+        <div className='hidden lg:flex items-center justify-between '>
             <span className='flex items-center gap-2'>
             <Image src={"/1.png"} width={30} height={30} alt='img' className='w-9 h-9 rounded-full' />
             <span>
@@ -140,7 +142,7 @@ export default function Home() {
             </span>
         </div>
         </div>
-       <div className='w-[55%]
+       <div className='w-11/12 lg:w-[55%]
         px-14 flex flex-col gap-7 mt-9'>
           {homeAPI.post.map((v,i) =>(
             <div key={i}>

@@ -3,9 +3,13 @@ import React, { useState } from 'react'
 import Home from './Home';
 import Link from 'next/link';
 import PopupModal from './PopupModal';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function Sidebar() {
+    const [open, setOpen] = useState (true);
     const [popupModalState, setPopupModalState] = useState(false);
+
     const toggleModal = () => {
         setPopupModalState(!popupModalState);
         console.log("Popup modal state:", !popupModalState);
@@ -26,29 +30,42 @@ export default function Sidebar() {
   return (
     <>
     <div className='w-full'>
-    <div className=' h-[100vh] fixed overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-black'>
-        <div className='py-6 w-52 px-6 flex flex-col gap-6'>
+        <Navbar />
+    <div className='hidden md:flex h-[100vh] fixed overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70'>
+        <div className={`${open? "w-64":"w-20"} py-6 px-6 flex flex-col gap-6 bg-white`}>
+        <Image
+            width={20}
+            height={20}
+            src="/left.png"
+            className={`absolute cursor-pointer right-2 top-20 md:bottom-12 w-4 h-4  ${
+              !open && "rotate-180"
+            }`}
+            onClick={() => setOpen(!open)}
+          />
             
-        <Link href={"/"}>   <Image  src={"/insta.png"} width={100} height={20} className='w-26 h-9' /></Link>
+        <Link href={"/"}>   <Image  src={"/insta.png"} width={100} height={20} className={`${!open && "hidden"} w-32 h-12 object-cover`} />
+        <Image src={"/instagram.png"} width={20} height={20} alt='icon' className={`text-sm md:text-base ${open && "hidden"} origin-left duration-200 m-2`} />
+        </Link>
           
-            <div className='flex flex-col gap-6'>
+            <div className='flex flex-col gap-5'>
                 {sidebarAPI.map((v,i) =>(
                     <div key={i} className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
                      <Image src={v.icon} width={20} height={20} className={`w-5 h-5 ${v.rounded ? 'rounded-full' : ''}`} />
-                     <p className='text-sm font-semibold'>{v.title}</p>
+                     <p className={`text-sm md:text-base ${!open && "hidden"} origin-left duration-200`}>{v.title}</p>
                     </div>
                 ))}
-                <div onClick={toggleModal} className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
-                <Image src={"/menu.png"} width={20} height={20} className="w-5 h-5 " />
-                     <p className='text-sm font-semibold'>More</p>
+                <div  className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
+                <Image src={"/menu.png"} width={20} height={20} className="w-6 h-6 object-cover" />
+                     <p onClick={toggleModal} className={`${!open && "hidden"} text-sm font-semibold`}>More</p>
                 </div>
             </div>
             </div>
          
     </div>
-    <div className='ml-52'>
+    <div className={`${open?"ml-0 md:ml-64":"ml-0 md:ml-20"}`}>
    <Home />
    </div>
+   <Footer />
     </div>
     {popupModalState && <PopupModal />}
     </>
