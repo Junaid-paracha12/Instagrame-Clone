@@ -1,4 +1,3 @@
-import React from "react";
 
 import Image from "next/image";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -121,7 +120,6 @@ export default function Home() {
               perPage: 6,
               perMove: 1,
               pagination: false,
-
               gap: "1rem",
               arrows: false,
               breakpoints: {
@@ -139,7 +137,7 @@ export default function Home() {
                 },
               },
             }}
-            className="mt-5 w-full lg:w-[70%] px-"
+            className="mt-5 w-full lg:w-[70%]"
           >
             {homeAPI.stories.map((v, i) => (
               <SplideSlide key={i} className="">

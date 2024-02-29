@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function Navbar() {
   return (
@@ -18,8 +17,12 @@ export default function Navbar() {
               />{" "}
             </Link>
           </li>
-            <li className="relative ">
-            <input type="search" placeholder="Search" className="px-8 py-1 max-w-32" />
+          <li className="relative ">
+            <input
+              type="search"
+              placeholder="Search"
+              className="px-8 py-1 max-w-32"
+            />
             <span className="absolute top-1.5 left-2">
               <Image
                 src={"/search.png"}
