@@ -32,12 +32,12 @@ export default function Sidebar() {
     <div className='w-full'>
         <Navbar />
     <div className='hidden md:flex h-[100vh] fixed overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70'>
-        <div className={`${open? "w-64":"w-20"} py-6 px-6 flex flex-col gap-6 bg-white`}>
+        <div className={`${open? "w-64":"w-20"} pb-12 px-6 flex flex-col gap-6 bg-white`}>
         <Image
             width={20}
             height={20}
             src="/left.png"
-            className={`absolute cursor-pointer right-2 top-20 md:bottom-12 w-4 h-4  ${
+            className={`absolute cursor-pointer right-2 top-16 md:bottom-12 w-4 h-4  ${
               !open && "rotate-180"
             }`}
             onClick={() => setOpen(!open)}
@@ -47,18 +47,21 @@ export default function Sidebar() {
         <Image src={"/instagram.png"} width={20} height={20} alt='icon' className={`text-sm md:text-base ${open && "hidden"} origin-left duration-200 m-2`} />
         </Link>
           
-            <div className='flex flex-col gap-5'>
+            <div className='flex flex-col gap-4'>
                 {sidebarAPI.map((v,i) =>(
                     <div key={i} className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
                      <Image src={v.icon} width={20} height={20} className={`w-5 h-5 ${v.rounded ? 'rounded-full' : ''}`} />
                      <p className={`text-sm md:text-base ${!open && "hidden"} origin-left duration-200`}>{v.title}</p>
                     </div>
                 ))}
-                <div  className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
-                <Image src={"/menu.png"} width={20} height={20} className="w-6 h-6 object-cover" />
-                     <p onClick={toggleModal} className={`${!open && "hidden"} text-sm font-semibold`}>More</p>
-                </div>
+               
             </div>
+             <div  className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
+                <Image src={"/menu.png"} width={20} height={20} className="w-6 h-6 object-cover" />
+                
+                     <p onClick={toggleModal} className={`${!open && "hidden"} text-sm font-semibold text-black`}>More</p>
+                </div>
+                
             </div>
          
     </div>

@@ -26,7 +26,7 @@ export default function index() {
         <Sidebar />
         </>
       ) : (
-        <div className="mx-auto w-3/5 flex flex-row gap-24 my-9">
+        <div className="mx-auto w-3/5 flex flex-row gap-24 my-9 place-content-center">
           <div className="hidden lg:flex">
             <Image
               src={"/mobile.jpg"}
@@ -69,14 +69,15 @@ export default function index() {
                 Login
               </button>
               <p className="text-sm text-center">OR</p>
-              <span>
+              <span className="flex items-center gap-1">
+                <Image src={"/facebook.png"} width={30} height={30} className="w-4 h-4" />
                 <h3 className="text-indigo-600">Log in with Facebook</h3>
               </span>
               <p className="text-xs text-slate-500/80"> Forget password?</p>
             </div>
             <span className="flex items-center gap-1">
-            <p>Don't have an Account?</p>
-            <p className="text-sky-500">Sign up</p></span>
+            <p className="text-sm">Don't have an Account?</p>
+            <p className="text-sky-500 text-sm">Sign up</p></span>
           </div>
         </div>
       )}
