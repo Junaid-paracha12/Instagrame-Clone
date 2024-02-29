@@ -44,23 +44,23 @@ export default function Sidebar() {
           />
             
         <Link href={"/"}>   <Image  src={"/insta.png"} width={100} height={20} className={`${!open && "hidden"} w-32 h-12 object-cover`} />
-        <Image src={"/instagram.png"} width={20} height={20} alt='icon' className={`text-sm md:text-base ${open && "hidden"} origin-left duration-200 m-2`} />
+        <Image src={"/instagram.png"} width={20} height={20} alt='icon' className={` ${open && "hidden"}`} />
         </Link>
           
             <div className='flex flex-col gap-4'>
                 {sidebarAPI.map((v,i) =>(
                     <div key={i} className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
-                     <Image src={v.icon} width={20} height={20} className={`w-5 h-5 ${v.rounded ? 'rounded-full' : ''}`} />
+                     <Image src={v.icon} width={20} height={20} className={`w-6 h-6 ${v.rounded ? 'rounded-full' : ''}`} />
                      <p className={`text-sm md:text-base ${!open && "hidden"} origin-left duration-200`}>{v.title}</p>
                     </div>
                 ))}
-               
-            </div>
-             <div  className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2'>
-                <Image src={"/menu.png"} width={20} height={20} className="w-6 h-6 object-cover" />
+               <div  className='flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1'>
+                <Image src={"/menu.png"} width={20} height={20} className="w-7 h-7 object-cover" />
                 
                      <p onClick={toggleModal} className={`${!open && "hidden"} text-sm font-semibold text-black`}>More</p>
                 </div>
+            </div>
+             
                 
             </div>
          
