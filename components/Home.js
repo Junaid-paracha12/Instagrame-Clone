@@ -117,23 +117,23 @@ export default function Home() {
         <div className="w-full flex items-center gap-5">
           <Splide
             options={{
-              perPage: 6,
+              perPage: 8,
               perMove: 1,
               pagination: false,
-              gap: "1rem",
+             
               arrows: false,
               breakpoints: {
                 991: {
-                  perPage: 5,
-                  gap: "1rem",
+                  perPage: 7,
+                 
                 },
                 767: {
-                  perPage: 4,
-                  gap: "1rem",
+                  perPage: 6,
+                 
                 },
                 551: {
-                  perPage: 3,
-                  gap: "1rem",
+                  perPage: 5,
+                 
                 },
               },
             }}
@@ -147,7 +147,7 @@ export default function Home() {
                   height={200}
                   className="w-14 h-14 rounded-full object-cover"
                 />
-                <p className="text-sm font-semibold">{v.title}</p>
+                <p className="text-xs font-semibold px-2">{v.title}</p>
               </SplideSlide>
             ))}
           </Splide>

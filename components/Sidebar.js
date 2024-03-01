@@ -84,7 +84,7 @@ export default function Sidebar() {
                   </p>
                 </div>
               ))}
-              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1">
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 mb-12">
                 <Image
                   src={"/menu.png"}
                   width={20}
