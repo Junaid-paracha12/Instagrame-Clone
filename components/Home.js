@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
@@ -113,27 +112,24 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-12 w-full px-9 ">
+      <div className="mt-10 w-full px-9 ">
         <div className="w-full flex items-center gap-5">
           <Splide
             options={{
               perPage: 8,
               perMove: 1,
               pagination: false,
-             
+
               arrows: false,
               breakpoints: {
                 991: {
                   perPage: 7,
-                 
                 },
                 767: {
                   perPage: 6,
-                 
                 },
                 551: {
                   perPage: 5,
-                 
                 },
               },
             }}

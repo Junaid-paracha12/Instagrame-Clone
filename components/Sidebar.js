@@ -33,7 +33,7 @@ export default function Sidebar() {
         <div className="hidden md:flex h-[100vh] fixed overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70">
           <div
             className={`${
-              open ? "w-64" : "w-20"
+              open ? "w-64" : "w-24"
             } pb-12 px-6 flex flex-col gap-6 bg-white`}
           >
             <Image
@@ -46,7 +46,7 @@ export default function Sidebar() {
               onClick={() => setOpen(!open)}
             />
 
-            <Link href={"/"}>
+            <Link href={"/"} className="mt-4">
               {" "}
               <Image
                 src={"/insta.png"}
@@ -59,7 +59,7 @@ export default function Sidebar() {
                 width={20}
                 height={20}
                 alt="icon"
-                className={` ${open && "hidden"}`}
+                className={` ${open && "hidden"} mx-3`}
               />
             </Link>
 
@@ -104,7 +104,7 @@ export default function Sidebar() {
             </div>
           </div>
         </div>
-        <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-20"}`}>
+        <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-24"}`}>
           <Home />
         </div>
         <Footer />

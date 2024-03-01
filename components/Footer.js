@@ -5,8 +5,8 @@ export default function Footer() {
     { icon: "/home.png" },
     { icon: "/direction.png" },
     { icon: "/video.png" },
-    { icon: "/chat.png" },
     { icon: "/tab.png" },
+    { icon: "/chat.png" },
     { icon: "/1.png", rounded: true },
   ];
   return (
