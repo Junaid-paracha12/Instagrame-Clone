@@ -73,6 +73,7 @@ export default function index() {
                     width={30}
                     height={30}
                     className="w-4 h-4"
+                    alt="icon"
                   />
                   <h3 className="text-indigo-600">Log in with Facebook</h3>
                 </span>

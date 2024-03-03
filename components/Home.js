@@ -141,6 +141,7 @@ export default function Home() {
                   width={200}
                   height={200}
                   className="w-14 h-14 rounded-full object-cover"
+                  alt="icon"
                 />
                 <p className="text-xs font-semibold py-2 px-1">{v.title}</p>
               </SplideSlide>
@@ -178,6 +179,7 @@ export default function Home() {
                     width={20}
                     height={20}
                     className="w-7 h-7 rounded-full"
+                    alt="cion"
                   />
                   <span className="">
                     <h2 className="text-lg font-semibold">
@@ -192,6 +194,7 @@ export default function Home() {
                     width={20}
                     height={20}
                     className=""
+                    alt="icon"
                   />
                 </span>
               </div>
@@ -206,17 +209,18 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between py-3">
                 <span className="flex items-center gap-3">
-                  <Image src={v.likeicon} width={20} height={20} className="" />
+                  <Image src={v.likeicon} width={20} height={20} className="" alt="icon" />
                   <Image
                     src={v.commenticon}
                     width={20}
                     height={20}
                     className=""
+                    alt="icon"
                   />
-                  <Image src={v.sendicon} width={20} height={20} className="" />
+                  <Image src={v.sendicon} width={20} height={20} className="" alt="icon" />
                 </span>
                 <span>
-                  <Image src={v.saveicon} width={20} height={20} className="" />
+                  <Image src={v.saveicon} width={20} height={20} className="" alt="icon" />
                 </span>
               </div>
               <input

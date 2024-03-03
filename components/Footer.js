@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Footer() {
   const footerAPI = [
@@ -20,6 +19,7 @@ export default function Footer() {
                 width={20}
                 height={20}
                 className={`w-5 h-5 ${v.rounded ? "rounded-full" : ""}`}
+                alt="icon"
               />
             </div>
           ))}

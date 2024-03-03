@@ -53,6 +53,7 @@ export default function Sidebar() {
                 width={100}
                 height={20}
                 className={`${!open && "hidden"} w-32 h-12 object-cover`}
+                alt="img"
               />
               <Image
                 src={"/instagram.png"}
@@ -74,6 +75,7 @@ export default function Sidebar() {
                     width={20}
                     height={20}
                     className={`w-6 h-6 ${v.rounded ? "rounded-full" : ""}`}
+                    alt="icon"
                   />
                   <p
                     className={`text-sm md:text-base ${
@@ -90,6 +92,7 @@ export default function Sidebar() {
                   width={20}
                   height={20}
                   className="w-7 h-7 object-cover"
+                  alt="icon"
                 />
 
                 <p

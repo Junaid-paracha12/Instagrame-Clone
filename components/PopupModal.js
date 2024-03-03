@@ -23,6 +23,7 @@ export default function PopupModal() {
                 width={20}
                 height={20}
                 className={`w-5 h-5 ${v.rounded ? "rounded-full" : ""}`}
+                alt="icon"
               />
               <p className="text-sm font-semibold">{v.title}</p>
             </div>

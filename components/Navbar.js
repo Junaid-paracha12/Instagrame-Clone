@@ -14,6 +14,7 @@ export default function Navbar() {
                 width={100}
                 height={20}
                 className=" w-32 h-12 object-cover"
+                alt="logo"
               />{" "}
             </Link>
           </li>
@@ -40,7 +41,9 @@ export default function Navbar() {
                 width={20}
                 height={20}
                 className="w-6 h-6"
+                alt="icon"
               />
+
             </span>
             <span>
               <Image
@@ -48,6 +51,7 @@ export default function Navbar() {
                 width={20}
                 height={20}
                 className="w-6 h-6"
+                alt="icon"
               />
             </span>
           </li>
