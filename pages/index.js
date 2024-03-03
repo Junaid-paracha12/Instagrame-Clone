@@ -1,3 +1,4 @@
+import Home from "@/components/Home";
 import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import { useState } from "react";

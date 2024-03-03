@@ -30,13 +30,13 @@ export default function Sidebar() {
     <>
       <div className="w-full">
         <Navbar />
-        <div className="hidden md:flex h-[100vh] fixed overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70">
+        <div className="hidden md:flex h-[100vh] fixed top-0 overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70">
           <div
             className={`${
               open ? "w-64" : "w-24"
-            } pb-12 px-6 flex flex-col gap-6 bg-white`}
+            } py-4 px-6 flex flex-col gap-9 bg-white`}
           >
-            <Image
+            {/* <Image
               width={20}
               height={20}
               src="/left.png"
@@ -44,9 +44,9 @@ export default function Sidebar() {
                 !open && "rotate-180"
               }`}
               onClick={() => setOpen(!open)}
-            />
+            /> */}
 
-            <Link href={"/"} className="mt-4">
+            <Link href={"/"} className="mt-4 ">
               {" "}
               <Image
                 src={"/insta.png"}
@@ -84,7 +84,7 @@ export default function Sidebar() {
                   </p>
                 </div>
               ))}
-              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 mb-12">
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
                   src={"/menu.png"}
                   width={20}

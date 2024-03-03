@@ -112,14 +112,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-10 w-full px-9 ">
-        <div className="w-full flex items-center gap-5">
+      <div className="mt-9 md:mt-2 w-full px-2 md:px-9 ">
+        <div className="w-full flex items-center  lg:gap-5">
           <Splide
             options={{
               perPage: 8,
               perMove: 1,
               pagination: false,
-
               arrows: false,
               breakpoints: {
                 991: {
@@ -129,11 +128,11 @@ export default function Home() {
                   perPage: 6,
                 },
                 551: {
-                  perPage: 5,
+                  perPage: 4,
                 },
               },
             }}
-            className="mt-5 w-full lg:w-[70%]"
+            className="mt-5 w-full lg:w-[70%] relative"
           >
             {homeAPI.stories.map((v, i) => (
               <SplideSlide key={i} className="">
@@ -143,7 +142,7 @@ export default function Home() {
                   height={200}
                   className="w-14 h-14 rounded-full object-cover"
                 />
-                <p className="text-xs font-semibold px-2">{v.title}</p>
+                <p className="text-xs font-semibold py-2 px-1">{v.title}</p>
               </SplideSlide>
             ))}
           </Splide>

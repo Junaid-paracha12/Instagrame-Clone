@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <>
       <div className="flex items-center justify-between w-full md:hidden fixed bg-white h-14 top-0 ">
-        <ul className="flex items-center justify-between px-5 w-full">
+        <ul className="flex items-center justify-between px-2 w-full">
           <li>
             <Link href={"/"}>
               {" "}
@@ -17,7 +17,7 @@ export default function Navbar() {
               />{" "}
             </Link>
           </li>
-          <li className="relative ">
+          {/* <li className="relative ">
             <input
               type="search"
               placeholder="Search"
@@ -32,14 +32,24 @@ export default function Navbar() {
                 className="w-5 h-5"
               />
             </span>
-          </li>
-          <li>
-            <Image
-              src={"/heart.png"}
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
+          </li> */}
+          <li className="flex items-center gap-2">
+            <span>
+              <Image
+                src={"/heart.png"}
+                width={20}
+                height={20}
+                className="w-6 h-6"
+              />
+            </span>
+            <span>
+              <Image
+                src={"/chat.png"}
+                width={20}
+                height={20}
+                className="w-6 h-6"
+              />
+            </span>
           </li>
         </ul>
       </div>

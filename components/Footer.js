@@ -1,18 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const footerAPI = [
     { icon: "/home.png" },
-    { icon: "/direction.png" },
-    { icon: "/video.png" },
+    { icon: "/search.png" },
     { icon: "/tab.png" },
-    { icon: "/chat.png" },
+    { icon: "/video.png" },
     { icon: "/1.png", rounded: true },
   ];
   return (
     <>
       <div className="flex md:hidden fixed bottom-0 w-full bg-white h-12 py-1">
-        <div className="flex items-center justify-between w-full px-5">
+        <div className="flex items-center justify-between w-full px-2">
           {footerAPI.map((v, i) => (
             <div key={i} className="">
               <Image
@@ -23,6 +23,7 @@ export default function Footer() {
               />
             </div>
           ))}
+        
         </div>
       </div>
     </>
