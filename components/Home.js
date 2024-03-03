@@ -112,8 +112,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="mt-9 md:mt-2 w-full px-2 md:px-9 ">
-        <div className="w-full flex items-center  lg:gap-5">
+      <div className="mt-9 md:mt-2 w-full px-0 md:px-9 ">
+        <div className="w-full flex items-center  lg:gap-5 px-2">
           <Splide
             options={{
               perPage: 8,
@@ -132,7 +132,7 @@ export default function Home() {
                 },
               },
             }}
-            className="mt-5 w-full lg:w-[70%] relative"
+            className="mt-5 w-full lg:w-[70%] "
           >
             {homeAPI.stories.map((v, i) => (
               <SplideSlide key={i} className="">
@@ -168,11 +168,11 @@ export default function Home() {
         </div>
         <div
           className="w-full lg:w-[55%]
-        px-0 md:px-14 flex flex-col gap-7 mt-9"
+        px-0 md:px-14 flex flex-col gap-7 mt-0 md:mt-9"
         >
           {homeAPI.post.map((v, i) => (
             <div key={i}>
-              <div className="flex items-center justify-between py-3">
+              <div className="flex items-center justify-between py-3 px-3 md:px-0">
                 <span className="flex items-center gap-2">
                   <Image
                     src={v.personimg}
@@ -207,7 +207,7 @@ export default function Home() {
                   className="w-full h-[50vh]"
                 />
               </div>
-              <div className="flex items-center justify-between py-3">
+              <div className="flex items-center justify-between py-3 px-3 md:px-0">
                 <span className="flex items-center gap-3">
                   <Image src={v.likeicon} width={20} height={20} className="" alt="icon" />
                   <Image

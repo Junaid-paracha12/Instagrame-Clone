@@ -1,6 +1,7 @@
 import Home from "@/components/Home";
 import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function index() {
@@ -81,7 +82,7 @@ export default function index() {
               </div>
               <span className="flex items-center gap-1">
                 <p className="text-sm">Don't have an Account?</p>
-                <p className="text-sky-500 text-sm">Sign up</p>
+               <Link href={"signup"}> <p className="text-sky-500 text-sm">Sign up</p></Link>
               </span>
             </div>
           </div>
