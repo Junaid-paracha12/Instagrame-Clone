@@ -116,7 +116,7 @@ export default function Home() {
         <div className="w-full flex items-center  lg:gap-5 px-2">
           <Splide
             options={{
-              perPage: 8,
+              perPage: 9,
               perMove: 1,
               pagination: false,
               arrows: false,
@@ -132,7 +132,7 @@ export default function Home() {
                 },
               },
             }}
-            className="mt-5 w-full lg:w-[70%] "
+            className="mt-7 md:mt-5 w-full lg:w-[70%] my-4 "
           >
             {homeAPI.stories.map((v, i) => (
               <SplideSlide key={i} className="">
@@ -140,7 +140,7 @@ export default function Home() {
                   src={v.img}
                   width={200}
                   height={200}
-                  className="w-14 h-14 rounded-full object-cover"
+                  className="w-16 h-16 md:w-14 md:h-14 rounded-full object-cover"
                   alt="icon"
                 />
                 <p className="text-xs font-semibold py-2 px-1">{v.title}</p>
@@ -213,21 +213,21 @@ export default function Home() {
                     src={v.likeicon}
                     width={20}
                     height={20}
-                    className=""
+                    className="cursor-pointer"
                     alt="icon"
                   />
                   <Image
                     src={v.commenticon}
                     width={20}
                     height={20}
-                    className=""
+                    className="cursor-pointer"
                     alt="icon"
                   />
                   <Image
                     src={v.sendicon}
                     width={20}
                     height={20}
-                    className=""
+                    className="cursor-pointer"
                     alt="icon"
                   />
                 </span>
@@ -236,10 +236,15 @@ export default function Home() {
                     src={v.saveicon}
                     width={20}
                     height={20}
-                    className=""
+                    className="cursor-pointer"
                     alt="icon"
                   />
                 </span>
+              </div>
+              <div>
+                <p className="text-slate-700/90 pb-3">444 likes</p>
+                <p className="text-blue-600 py-2">#viralphoto,#trendingphoto,#topphoto</p>
+                <p className="text-slate-700/90 cursor-pointer">view all 333 comments</p>
               </div>
               <div className="relative">
                 <input
@@ -260,7 +265,92 @@ export default function Home() {
               </div>
             </div>
           ))}
+            <div className="my-4">
+              <div className="flex items-center justify-between py-3 px-3 md:px-0 ">
+                <span className="flex items-center gap-2">
+                  <Image
+                    src={"/1.png"}
+                    width={20}
+                    height={20}
+                    className="w-7 h-7 rounded-full"
+                    alt="cion"
+                  />
+                  <span className="">
+                    <h2 className="text-lg font-semibold">
+                      John Doe
+                      <p className="text-xs text-slate-500/80"></p>
+                    </h2>
+                  </span>
+                </span>
+                <span>
+                  <Image
+                    src={"/option.png"}
+                    width={20}
+                    height={20}
+                    className=""
+                    alt="icon"
+                  />
+                </span>
+              </div>
+              <div className="h-[50vh] border-slate-500 flex items-center justify-center bg-slate-300/60 rounded-md flex-col">
+                <Image src={"/calendar.png"} width={50} height={50} className="w-8 h-8" />
+                <h1 className="text-2xl font-semibold ">Born on 1 Octobar 1999</h1>
+              </div>
+              <div className="flex items-center justify-between py-3 px-3 md:px-0">
+                <span className="flex items-center gap-3">
+                  <Image
+                    src={"/heart.png"}
+                    width={20}
+                    height={20}
+                    className="cursor-pointer"
+                    alt="icon"
+                  />
+                  <Image
+                    src={"/comment.png"}
+                    width={20}
+                    height={20}
+                    className="cursor-pointer"
+                    alt="icon"
+                  />
+                  <Image
+                    src={"/send.png"}
+                    width={20}
+                    height={20}
+                    className="cursor-pointer"
+                    alt="icon"
+                  />
+                </span>
+                <span>
+                  <Image
+                    src={"/bookmark.png"}
+                    width={20}
+                    height={20}
+                    className="cursor-pointer"
+                    alt="icon"
+                  />
+                </span>
+              </div>
+             
+              <div className="relative">
+                <input
+                  placeholder="Add a comment..."
+                  type="text"
+                  className="w-full px-2 py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
+                />
+
+                <span className="absolute right-2 top-3">
+                  <Image
+                    src={"/smile.png"}
+                    width={20}
+                    height={20}
+                    className="w-3 h-3"
+                    alt="icon"
+                  />
+                </span>
+              </div>
+            </div>
         </div>
+       
       </div>
     </>
   );

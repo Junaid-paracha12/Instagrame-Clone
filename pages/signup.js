@@ -58,21 +58,21 @@ export default function SignUp() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Mobile Number or Email"
-                className="py-1.5 px-3 max-w-72 placeholder:text-xs"
+                className="py-1.5 px-3 max-w-72 placeholder:text-xs border focus:border-slate-600/60 focus:outline-none rounded-sm"
               />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setFullName(e.target.value)}
                 placeholder="Full Name"
-                className="py-1.5 px-3 max-w-72 placeholder:text-xs"
+                className="py-1.5 px-3 max-w-72 placeholder:text-xs border focus:border-slate-600/60 focus:outline-none rounded-sm"
               />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Username"
-                className="py-1.5 px-3 max-w-72 placeholder:text-xs"
+                className="py-1.5 px-3 max-w-72 placeholder:text-xs border focus:border-slate-600/60 focus:outline-none rounded-sm"
               />
 
               <input
@@ -80,7 +80,7 @@ export default function SignUp() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
-                className="py-1.5 px-3 max-w-72"
+                className="py-1.5 px-3 max-w-72 border focus:border-slate-600/60 focus:outline-none rounded-sm"
               />
               <p className="max-w-64 text-center text-slate-500/90 font-semibold text-xs">People who use our service may have uploaded your contact information to Instagram. Learn More</p>
               <button

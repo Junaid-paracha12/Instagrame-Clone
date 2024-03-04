@@ -53,7 +53,7 @@ export default function index() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Phone number, username, or email"
-                  className="py-1.5 px-3 max-w-72 placeholder:text-xs"
+                  className="py-1.5 px-3 max-w-72 placeholder:text-xs border focus:border-slate-600/60 focus:outline-none rounded-sm"
                 />
 
                 <input
@@ -61,7 +61,7 @@ export default function index() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
-                  className="py-1.5 px-3 max-w-72"
+                  className="py-1.5 px-3 max-w-72 border focus:border-slate-600/60 focus:outline-none rounded-sm"
                 />
 
                 <button
