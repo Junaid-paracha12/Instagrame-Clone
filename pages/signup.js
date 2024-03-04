@@ -82,7 +82,7 @@ export default function SignUp() {
                 placeholder="Password"
                 className="py-1.5 px-3 max-w-72"
               />
-
+              <p className="max-w-64 text-center text-slate-500/90 font-semibold text-xs">People who use our service may have uploaded your contact information to Instagram. Learn More</p>
               <button
                 onClick={handleSignUp}
                 className="rounded-md bg-sky-600 text-white py-1"
