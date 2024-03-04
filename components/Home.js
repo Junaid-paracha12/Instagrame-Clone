@@ -209,7 +209,13 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between py-3 px-3 md:px-0">
                 <span className="flex items-center gap-3">
-                  <Image src={v.likeicon} width={20} height={20} className="" alt="icon" />
+                  <Image
+                    src={v.likeicon}
+                    width={20}
+                    height={20}
+                    className=""
+                    alt="icon"
+                  />
                   <Image
                     src={v.commenticon}
                     width={20}
@@ -217,17 +223,41 @@ export default function Home() {
                     className=""
                     alt="icon"
                   />
-                  <Image src={v.sendicon} width={20} height={20} className="" alt="icon" />
+                  <Image
+                    src={v.sendicon}
+                    width={20}
+                    height={20}
+                    className=""
+                    alt="icon"
+                  />
                 </span>
                 <span>
-                  <Image src={v.saveicon} width={20} height={20} className="" alt="icon" />
+                  <Image
+                    src={v.saveicon}
+                    width={20}
+                    height={20}
+                    className=""
+                    alt="icon"
+                  />
                 </span>
               </div>
-              <input
-                placeholder="Add a comment..."
-                type="text"
-                className="w-full px-2 py-1"
-              />
+              <div className="relative">
+                <input
+                  placeholder="Add a comment..."
+                  type="text"
+                  className="w-full px-2 py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
+                />
+
+                <span className="absolute right-2 top-3">
+                  <Image
+                    src={"/smile.png"}
+                    width={20}
+                    height={20}
+                    className="w-3 h-3"
+                    alt="icon"
+                  />
+                </span>
+              </div>
             </div>
           ))}
         </div>

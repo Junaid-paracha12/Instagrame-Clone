@@ -30,13 +30,17 @@ export default function SignUp() {
         <div className="mx-auto w-3/4 flex flex-row gap-24 my-9 place-content-center">
           {/* ... Similar structure to the login page */}
           <div className="flex flex-col gap-8 mt-7">
-            <Image
+           
+           <span className="flex flex-col items-center"> <Image
               src={"/insta.png"}
               width={200}
               height={200}
               alt="logo"
               className=""
             />
+            
+              <p className="max-w-64 text-center text-slate-500/90 font-semibold">Sign up to see photos and videos from your friends.</p>
+           </span>
             <span className="flex items-center gap-1 rounded-md bg-sky-600 text-white py-1.5 px-4 ">
               <Image
                 src={"/facebook.png"}

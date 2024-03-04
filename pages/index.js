@@ -1,4 +1,5 @@
 import Home from "@/components/Home";
+import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,8 +21,10 @@ export default function index() {
   return (
     <>
       <div>
+        
         {isAuthenticated ? (
           <>
+          <Navbar />
             <Sidebar />
           </>
         ) : (

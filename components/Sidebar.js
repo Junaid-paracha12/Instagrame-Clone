@@ -3,7 +3,7 @@ import { useState } from "react";
 import Home from "./Home";
 import Link from "next/link";
 import PopupModal from "./PopupModal";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default function Sidebar() {
@@ -29,7 +29,7 @@ export default function Sidebar() {
   return (
     <>
       <div className="w-full">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="hidden md:flex h-[100vh] fixed top-0 overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70">
           <div
             className={`${
@@ -52,7 +52,7 @@ export default function Sidebar() {
                 src={"/insta.png"}
                 width={100}
                 height={20}
-                className={`${!open && "hidden"} w-32 h-12 object-cover`}
+                className={`${!open && "hidden"} w-32 h-10 object-cover`}
                 alt="img"
               />
               <Image
@@ -78,7 +78,7 @@ export default function Sidebar() {
                     alt="icon"
                   />
                   <p
-                    className={`text-sm md:text-base ${
+                    className={`text-sm  font-semibold ${
                       !open && "hidden"
                     } origin-left duration-200`}
                   >
