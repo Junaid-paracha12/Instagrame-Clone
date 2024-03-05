@@ -3,8 +3,7 @@ import { useState } from "react";
 import Home from "./Home";
 import Link from "next/link";
 import PopupModal from "./PopupModal";
-// import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -110,7 +109,7 @@ export default function Sidebar() {
         <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-24"}`}>
           <Home />
         </div>
-        <Footer />
+        
       </div>
       {popupModalState && <PopupModal />}
     </>

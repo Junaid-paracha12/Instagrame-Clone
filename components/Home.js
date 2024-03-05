@@ -176,13 +176,13 @@ export default function Home() {
                 <span className="flex items-center gap-2">
                   <Image
                     src={v.personimg}
-                    width={20}
-                    height={20}
-                    className="w-7 h-7 rounded-full"
+                    width={200}
+                    height={200}
+                    className="w-9 h-9 rounded-full object-cover"
                     alt="cion"
                   />
                   <span className="">
-                    <h2 className="text-lg font-semibold">
+                    <h2 className="text-base font-semibold">
                       {v.title}
                       <p className="text-xs text-slate-500/80">{v.subtitle}</p>
                     </h2>
@@ -250,7 +250,7 @@ export default function Home() {
                 <input
                   placeholder="Add a comment..."
                   type="text"
-                  className="w-full px-2 py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
+                  className="w-full py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
                 />
 
                 <span className="absolute right-2 top-3">
@@ -262,6 +262,7 @@ export default function Home() {
                     alt="icon"
                   />
                 </span>
+                <div className="h-0.5 bg-slate-300/60 "></div>
               </div>
             </div>
           ))}
@@ -270,13 +271,13 @@ export default function Home() {
                 <span className="flex items-center gap-2">
                   <Image
                     src={"/1.png"}
-                    width={20}
-                    height={20}
-                    className="w-7 h-7 rounded-full"
+                    width={200}
+                    height={200}
+                    className="w-9 h-9 rounded-full"
                     alt="cion"
                   />
                   <span className="">
-                    <h2 className="text-lg font-semibold">
+                    <h2 className="text-base font-semibold">
                       John Doe
                       <p className="text-xs text-slate-500/80"></p>
                     </h2>
@@ -335,7 +336,7 @@ export default function Home() {
                 <input
                   placeholder="Add a comment..."
                   type="text"
-                  className="w-full px-2 py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
+                  className="w-full py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
                 />
 
                 <span className="absolute right-2 top-3">
@@ -348,6 +349,7 @@ export default function Home() {
                   />
                 </span>
               </div>
+              <div className="h-0.5 bg-slate-300/60 "></div>
             </div>
         </div>
        
