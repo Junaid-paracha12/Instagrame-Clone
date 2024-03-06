@@ -43,7 +43,6 @@ export default function Navbar() {
                 className="w-6 h-6"
                 alt="icon"
               />
-
             </span>
             <span>
               <Image

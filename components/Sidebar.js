@@ -4,7 +4,6 @@ import Home from "./Home";
 import Link from "next/link";
 import PopupModal from "./PopupModal";
 
-
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
   const [popupModalState, setPopupModalState] = useState(false);
@@ -109,7 +108,6 @@ export default function Sidebar() {
         <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-24"}`}>
           <Home />
         </div>
-        
       </div>
       {popupModalState && <PopupModal />}
     </>

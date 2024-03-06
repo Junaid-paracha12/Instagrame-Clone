@@ -241,12 +241,16 @@ export default function Home() {
                   />
                 </span>
               </div>
-              <div>
+              <div className="px-3 md:px-0">
                 <p className="text-slate-700/90 pb-3">444 likes</p>
-                <p className="text-blue-600 py-2">#viralphoto,#trendingphoto,#topphoto</p>
-                <p className="text-slate-700/90 cursor-pointer">view all 333 comments</p>
+                <p className="text-blue-600 py-2">
+                  #viralphoto,#trendingphoto,#topphoto
+                </p>
+                <p className="text-slate-700/90 cursor-pointer">
+                  view all 333 comments
+                </p>
               </div>
-              <div className="relative">
+              <div className="relative px-3 md:px-0">
                 <input
                   placeholder="Add a comment..."
                   type="text"
@@ -262,97 +266,104 @@ export default function Home() {
                     alt="icon"
                   />
                 </span>
-                <div className="h-0.5 bg-slate-300/60 "></div>
-              </div>
-            </div>
-          ))}
-            <div className="my-4">
-              <div className="flex items-center justify-between py-3 px-3 md:px-0 ">
-                <span className="flex items-center gap-2">
-                  <Image
-                    src={"/1.png"}
-                    width={200}
-                    height={200}
-                    className="w-9 h-9 rounded-full"
-                    alt="cion"
-                  />
-                  <span className="">
-                    <h2 className="text-base font-semibold">
-                      John Doe
-                      <p className="text-xs text-slate-500/80"></p>
-                    </h2>
-                  </span>
-                </span>
-                <span>
-                  <Image
-                    src={"/option.png"}
-                    width={20}
-                    height={20}
-                    className=""
-                    alt="icon"
-                  />
-                </span>
-              </div>
-              <div className="h-[50vh] border-slate-500 flex items-center justify-center bg-slate-300/60 rounded-md flex-col">
-                <Image src={"/calendar.png"} width={50} height={50} className="w-8 h-8" />
-                <h1 className="text-2xl font-semibold ">Born on 1 Octobar 1999</h1>
-              </div>
-              <div className="flex items-center justify-between py-3 px-3 md:px-0">
-                <span className="flex items-center gap-3">
-                  <Image
-                    src={"/heart.png"}
-                    width={20}
-                    height={20}
-                    className="cursor-pointer"
-                    alt="icon"
-                  />
-                  <Image
-                    src={"/comment.png"}
-                    width={20}
-                    height={20}
-                    className="cursor-pointer"
-                    alt="icon"
-                  />
-                  <Image
-                    src={"/send.png"}
-                    width={20}
-                    height={20}
-                    className="cursor-pointer"
-                    alt="icon"
-                  />
-                </span>
-                <span>
-                  <Image
-                    src={"/bookmark.png"}
-                    width={20}
-                    height={20}
-                    className="cursor-pointer"
-                    alt="icon"
-                  />
-                </span>
-              </div>
-             
-              <div className="relative">
-                <input
-                  placeholder="Add a comment..."
-                  type="text"
-                  className="w-full py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
-                />
-
-                <span className="absolute right-2 top-3">
-                  <Image
-                    src={"/smile.png"}
-                    width={20}
-                    height={20}
-                    className="w-3 h-3"
-                    alt="icon"
-                  />
-                </span>
+                
               </div>
               <div className="h-0.5 bg-slate-300/60 "></div>
             </div>
+          ))}
+          <div className="my-4">
+            <div className="flex items-center justify-between py-3 px-3 md:px-0 ">
+              <span className="flex items-center gap-2">
+                <Image
+                  src={"/1.png"}
+                  width={200}
+                  height={200}
+                  className="w-9 h-9 rounded-full"
+                  alt="cion"
+                />
+                <span className="">
+                  <h2 className="text-base font-semibold">
+                    John Doe
+                    <p className="text-xs text-slate-500/80"></p>
+                  </h2>
+                </span>
+              </span>
+              <span>
+                <Image
+                  src={"/option.png"}
+                  width={20}
+                  height={20}
+                  className=""
+                  alt="icon"
+                />
+              </span>
+            </div>
+            <div className="h-[50vh] border-slate-500 flex items-center justify-center bg-slate-300/60 rounded-md flex-col">
+              <Image
+                src={"/calendar.png"}
+                width={50}
+                height={50}
+                className="w-8 h-8"
+              />
+              <h1 className="text-2xl font-semibold ">
+                Born on 1 Octobar 1999
+              </h1>
+            </div>
+            <div className="flex items-center justify-between py-3 px-3 md:px-0">
+              <span className="flex items-center gap-3">
+                <Image
+                  src={"/heart.png"}
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
+                  alt="icon"
+                />
+                <Image
+                  src={"/comment.png"}
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
+                  alt="icon"
+                />
+                <Image
+                  src={"/send.png"}
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
+                  alt="icon"
+                />
+              </span>
+              <span>
+                <Image
+                  src={"/bookmark.png"}
+                  width={20}
+                  height={20}
+                  className="cursor-pointer"
+                  alt="icon"
+                />
+              </span>
+            </div>
+
+            <div className="relative px-3 md:px-0">
+              <input
+                placeholder="Add a comment..."
+                type="text"
+                className="w-full py-1 placeholder:text-sm border focus:border-hidden focus:outline-none"
+              />
+
+              <span className="absolute right-2 top-3">
+                <Image
+                  src={"/smile.png"}
+                  width={20}
+                  height={20}
+                  className="w-3 h-3"
+                  alt="icon"
+                />
+              </span>
+            </div>
+            <div className="h-0.5 bg-slate-300/60 "></div>
+          </div>
         </div>
-       
       </div>
     </>
   );

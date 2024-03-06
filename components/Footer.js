@@ -18,12 +18,13 @@ export default function Footer() {
                 src={v.icon}
                 width={20}
                 height={20}
-                className={`w-6 h-6 stroke-black ${v.rounded ? "rounded-full" : ""}`}
+                className={`w-6 h-6 stroke-black ${
+                  v.rounded ? "rounded-full" : ""
+                }`}
                 alt="icon"
               />
             </div>
           ))}
-        
         </div>
       </div>
     </>
