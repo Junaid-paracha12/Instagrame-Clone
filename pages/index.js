@@ -1,5 +1,7 @@
+import Home from "@/components/Home";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -23,7 +25,10 @@ export default function index() {
         {isAuthenticated ? (
           <>
             <Navbar />
-            <Sidebar />
+           <Sidebar />
+            <div className="ml-0 md:ml-64">
+              <Home />
+            </div>
           </>
         ) : (
           <div className="mx-auto w-4/5 flex items-center my-9 place-content-center px-4 text-center">

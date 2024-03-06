@@ -21,7 +21,6 @@ export default function Sidebar() {
     { title: "Messages", icon: "/chat.png" },
     { title: "Notifications", icon: "/heart.png" },
     { title: "create", icon: "/tab.png" },
-    { title: "Profile", icon: "/1.png", rounded: true },
   ];
 
   return (
@@ -62,28 +61,98 @@ export default function Sidebar() {
               />
             </Link>
 
-            <div className="flex flex-col gap-4">
-              {sidebarAPI.map((v, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 p-2"
-                >
+            <div className="flex flex-col gap-7">
+              <Link href={"/"}>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/home.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">Home</p>
+              </div></Link>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/search.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">Search</p>
+              </div>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/direction.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">Explore</p>
+              </div>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/video.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">Reels</p>
+              </div>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/chat.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">Messages</p>
+              </div>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/heart.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">Notifications</p>
+              </div>
+              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+                <Image
+                  src={"/tab.png"}
+                  width={20}
+                  height={20}
+                  className="w-6 h-6 object-cover"
+                  alt="icon"
+                />
+
+                <p className="text-sm font-semibold">create</p>
+              </div>
+              <Link href={"profile"}>
+                <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                   <Image
-                    src={v.icon}
+                    src={"/1.png"}
                     width={20}
                     height={20}
-                    className={`w-6 h-6 ${v.rounded ? "rounded-full" : ""}`}
+                    className="w-7 h-7 object-cover rounded-full"
                     alt="icon"
                   />
-                  <p
-                    className={`text-sm  font-semibold ${
-                      !open && "hidden"
-                    } origin-left duration-200`}
-                  >
-                    {v.title}
-                  </p>
+
+                  <p className="text-sm font-semibold">Profile</p>
                 </div>
-              ))}
+              </Link>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
                   src={"/menu.png"}
@@ -105,9 +174,9 @@ export default function Sidebar() {
             </div>
           </div>
         </div>
-        <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-24"}`}>
+        {/* <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-24"}`}>
           <Home />
-        </div>
+        </div> */}
       </div>
       {popupModalState && <PopupModal />}
     </>
