@@ -9,14 +9,14 @@ export default function() {
         <Navbar />
         <Sidebar />
         <Footer />
-        <div className="md:ml-64 py-8 px-5 md:px-28 my-9">
+        <div className="md:ml-64 py-8 px-5 md:px-20 my-9">
            <div className="flex flex-row gap-8">
             <span>
             <Image src={"/1.png"} width={200} height={200} className="rounded-full w-20 h-20 md:w-28 md:h-28"/>
             </span>
             <div className="md:ml-9">
-                <span className="flex flex-col md:flex-row gap-2">
-                <h1 className="text-lg md:text-xl font-semibold">John Doe-000</h1>
+                <span className="flex flex-col lg:flex-row gap-2">
+                <h1 className="text-lg md:text-xl font-semibold">John Doe</h1>
                 <span className="flex items-center gap-2 md:ml-4">
                 <button className="bg-slate-300/70 px-3 py-1 rounded-lg  text-sm md:text-base font-semibold">Edit profile</button>
                 <button className="bg-slate-300/70 px-3 py-1 rounded-lg text-sm md:text-base font-semibold">view archieve</button>
@@ -48,7 +48,7 @@ export default function() {
                 <Image src={"/bookmark.png"} width={20} height={50} className="w-4 h-4" />
              <p className="font-semibold">Saved</p></span>
             <span className="flex items-center gap-1">
-            <Image src={"/man.png"} width={20} height={50} className="w-4 h-4" />
+            <Image src={"/man.png"} width={20} height={50} className="w-5 h-5" />
                  <p className="font-semibold">Taged</p></span>
            </div>
            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
