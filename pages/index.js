@@ -34,7 +34,7 @@ export default function index() {
           <div className="mx-auto w-4/5 flex items-center my-9 place-content-center px-4 text-center">
             <div className="hidden lg:flex justify-center">
               <Image
-                src={"/mobile.jpg"}
+                src={"/mobile.JPG"}
                 width={2000}
                 height={2000}
                 alt="img"
