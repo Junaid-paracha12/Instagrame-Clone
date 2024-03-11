@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Home from "@/components/Home";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
@@ -26,6 +27,7 @@ export default function index() {
           <>
             <Navbar />
            <Sidebar />
+           <Footer />
             <div className="ml-0 md:ml-64">
               <Home />
             </div>
