@@ -1,12 +1,18 @@
 import Image from "next/image";
 import { useState } from "react";
-import Home from "./Home";
 import Link from "next/link";
 import PopupModal from "./PopupModal";
+import Notification from "./Notification";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
   const [popupModalState, setPopupModalState] = useState(false);
+  const [notificationState, setNotificationState] = useState(false);
+
+  const toggleNotification = () =>{
+    setNotificationState(!notificationState);
+    console.log("notification bar:",!notificationState );
+  };
 
   const toggleModal = () => {
     setPopupModalState(!popupModalState);
@@ -61,7 +67,7 @@ export default function Sidebar() {
               />
             </Link>
 
-            <div className="flex flex-col gap-7">
+            <div className="flex flex-col gap-8">
               <Link href={"/"}>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
@@ -72,7 +78,10 @@ export default function Sidebar() {
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">Home</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Home</p>
               </div></Link>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
@@ -83,7 +92,10 @@ export default function Sidebar() {
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">Search</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Search</p>
               </div>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
@@ -94,7 +106,10 @@ export default function Sidebar() {
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">Explore</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Explore</p>
               </div>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
@@ -105,7 +120,10 @@ export default function Sidebar() {
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">Reels</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Reels</p>
               </div>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
@@ -116,18 +134,30 @@ export default function Sidebar() {
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">Messages</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Messages</p>
               </div>
-              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+              <div
+               onClick={toggleNotification}
+              className=" ">
+                <span  onClick={() => setOpen(!open)} className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1">
                 <Image
                   src={"/heart.png"}
                   width={20}
                   height={20}
-                  className="w-6 h-6 object-cover"
+                  className={`w-6 h-6  ${
+                    !open && ""
+                  }`}
+                 
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">Notifications</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Notifications</p></span>
               </div>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
                 <Image
@@ -138,7 +168,10 @@ export default function Sidebar() {
                   alt="icon"
                 />
 
-                <p className="text-sm font-semibold">create</p>
+                <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>create</p>
               </div>
               <Link href={"profile"}>
                 <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
@@ -150,7 +183,10 @@ export default function Sidebar() {
                     alt="icon"
                   />
 
-                  <p className="text-sm font-semibold">Profile</p>
+                  <p  
+                  className={`${
+                    !open && "hidden"
+                  } text-sm font-semibold text-black`}>Profile</p>
                 </div>
               </Link>
               <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
@@ -179,6 +215,7 @@ export default function Sidebar() {
         </div> */}
       </div>
       {popupModalState && <PopupModal />}
+      {notificationState && <Notification />}
     </>
   );
 }

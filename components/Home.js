@@ -118,7 +118,7 @@ export default function Home() {
             options={{
               perPage: 9,
               perMove: 1,
-              pagination: false,
+             
               arrows: false,
               breakpoints: {
                 991: {
