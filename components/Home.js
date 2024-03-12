@@ -113,59 +113,59 @@ export default function Home() {
   return (
     <>
       <div className="mt-9 md:mt-2 w-full px-0 md:px-9 ">
-        <div className="w-full flex items-center  lg:gap-5 px-2">
-          <Splide
-            options={{
-              perPage: 9,
-              perMove: 1,
-             
-              arrows: false,
-              breakpoints: {
-                991: {
-                  perPage: 7,
-                },
-                767: {
-                  perPage: 6,
-                },
-                551: {
-                  perPage: 4,
-                },
-              },
-            }}
-            className="mt-7 md:mt-5 w-full lg:w-[70%] my-4 "
-          >
-            {homeAPI.stories.map((v, i) => (
-              <SplideSlide key={i} className="">
-                <Image
-                  src={v.img}
-                  width={200}
-                  height={200}
-                  className="w-16 h-16 md:w-14 md:h-14 rounded-full object-cover"
-                  alt="icon"
-                />
-                <p className="text-xs font-semibold py-2 px-1">{v.title}</p>
-              </SplideSlide>
-            ))}
-          </Splide>
-          <div className="hidden lg:flex items-center justify-between ">
-            <span className="flex items-center gap-2">
-              <Image
-                src={"/1.png"}
-                width={30}
-                height={30}
-                alt="img"
-                className="w-9 h-9 rounded-full"
-              />
-              <span>
-                <h1 className="text-lg font-semibold">John-221</h1>
-                <p className="text-sm ">David John</p>
-              </span>
-            </span>
-            <span className="absolute right-9">
-              <button className="text-sky-500">Switch</button>
-            </span>
-          </div>
-        </div>
+      <div className="w-full flex items-center lg:gap-5 px-2">
+  <Splide
+    options={{
+      perPage: 9,
+      perMove: 1,
+      arrows: false,
+      breakpoints: {
+        991: {
+          perPage: 7,
+        },
+        767: {
+          perPage: 6,
+        },
+        551: {
+          perPage: 4,
+        },
+      },
+    }}
+    className="mt-7 md:mt-5 w-full lg:w-[70%] my-4 z-10"
+  >
+    {homeAPI.stories.map((v, i) => (
+      <SplideSlide key={i} className="">
+        <Image
+          src={v.img}
+          width={200}
+          height={200}
+          className="w-16 h-16 md:w-14 md:h-14 rounded-full object-cover"
+          alt="icon"
+        />
+        <p className="text-xs font-semibold py-2 px-1">{v.title}</p>
+      </SplideSlide>
+    ))}
+  </Splide>
+  <div className="hidden lg:flex items-center justify-between z-20">
+    <span className="flex items-center gap-2">
+      <Image
+        src={"/1.png"}
+        width={30}
+        height={30}
+        alt="img"
+        className="w-9 h-9 rounded-full"
+      />
+      <span>
+        <h1 className="text-lg font-semibold">John-221</h1>
+        <p className="text-sm ">David John</p>
+      </span>
+    </span>
+    <span className="absolute right-9">
+      <button className="text-sky-500">Switch</button>
+    </span>
+  </div>
+</div>
+
         <div
           className="w-full lg:w-[55%]
         px-0 md:px-14 flex flex-col gap-7 mt-0 md:mt-9"

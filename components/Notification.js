@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Notification() {
     return (
         <>
-        <div className="fixed top-12 md:top-0 right-5 md:left-24 bg-white-300 overflow-y-scroll scroll-smooth h-full w-72 md:w-96 bg-white"> 
+        <div className="fixed top-12 md:top-0 right-5 md:left-24 bg-white-300 overflow-y-scroll scroll-smooth h-full w-72 md:w-96 bg-white z-50"> 
             <div className="py-7 px-3">
                <h1 className="text-xl md:text-2xl font-semibold">
                 Notifications
