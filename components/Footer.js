@@ -26,4 +26,4 @@ export default function Footer() {
       {createState && <Create onClose={toggleCreate} />}
     </>
   );
-}
+};
