@@ -3,11 +3,18 @@ import { useState } from "react";
 import Link from "next/link";
 import PopupModal from "./PopupModal";
 import Notification from "./Notification";
+import Create from "./Create";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
   const [popupModalState, setPopupModalState] = useState(false);
   const [notificationState, setNotificationState] = useState(false);
+  const[createState,setCreateState] =useState(false);
+
+   const toggleCreate = () =>{
+    setCreateState(!createState);
+   };
+
 
   const toggleNotification = () =>{
     setNotificationState(!notificationState);
@@ -32,22 +39,14 @@ export default function Sidebar() {
   return (
     <>
       <div className="w-full">
-        {/* <Navbar /> */}
+     
         <div className="hidden md:flex h-[100vh] fixed top-0 overflow-y-scroll scroll-smooth scroll-hidden border-r-2 border-slate-200/70">
           <div
             className={`${
               open ? "w-64" : "w-24"
             } py-4 px-6 flex flex-col gap-9 bg-white`}
           >
-            {/* <Image
-              width={20}
-              height={20}
-              src="/left.png"
-              className={`absolute cursor-pointer right-2 top-16 md:bottom-12 w-4 h-4  ${
-                !open && "rotate-180"
-              }`}
-              onClick={() => setOpen(!open)}
-            /> */}
+            
 
             <Link href={"/"} className="mt-4 ">
               {" "}
@@ -159,7 +158,10 @@ export default function Sidebar() {
                     !open && "hidden"
                   } text-sm font-semibold text-black`}>Notifications</p></span>
               </div>
-              <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
+              <div
+              onClick={toggleCreate}
+               className=" ">
+                <span className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1">
                 <Image
                   src={"/tab.png"}
                   width={20}
@@ -171,7 +173,7 @@ export default function Sidebar() {
                 <p  
                   className={`${
                     !open && "hidden"
-                  } text-sm font-semibold text-black`}>create</p>
+                  } text-sm font-semibold text-black`}>create</p></span>
               </div>
               <Link href={"profile"}>
                 <div className="flex items-center gap-4 rounded-md  cursor-pointer hover:bg-slate-300/70 px-1 ">
@@ -210,12 +212,12 @@ export default function Sidebar() {
             </div>
           </div>
         </div>
-        {/* <div className={`${open ? "ml-0 md:ml-64" : "ml-0 md:ml-24"}`}>
-          <Home />
-        </div> */}
+        
       </div>
       {popupModalState && <PopupModal />}
       {notificationState && <Notification />}
+      {createState && <Create onClose={toggleCreate} />}
+
     </>
   );
 }

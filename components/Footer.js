@@ -1,8 +1,14 @@
 import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
+import Create from "./Create";
 
 export default function Footer() {
-  
+  const[createState,setCreateState] =useState(false);
+
+   const toggleCreate = () =>{
+    setCreateState(!createState);
+   };
 
   return (
     <>
@@ -11,12 +17,13 @@ export default function Footer() {
           <Link href={"/"}>
           <Image src={"/home.png"} width={20} height={20} className="w-6 h-6" alt="icon" /></Link>
           <Image src={"/search.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
-          <Image src={"/tab.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
+          <Image onClick={toggleCreate} src={"/tab.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
           <Image src={"/video.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
           <Image src={"/1.png"} width={20} height={20} className="w-7 h-7 rounded-full" alt="icon" />
           
         </div>
       </div>
+      {createState && <Create onClose={toggleCreate} />}
     </>
   );
 }
