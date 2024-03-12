@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="flex md:hidden fixed bottom-0 w-full bg-white h-12 py-1">
+      <div className="flex md:hidden fixed bottom-0 w-full bg-white h-12 py-1 z-50">
         <div className="flex items-center justify-between w-full px-4">
           <Link href={"/"}>
           <Image src={"/home.png"} width={20} height={20} className="w-6 h-6" alt="icon" /></Link>

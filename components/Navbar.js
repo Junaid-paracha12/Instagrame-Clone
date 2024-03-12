@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex items-center justify-between w-full md:hidden absolute bg-white h-14 top-0 ">
+      <div className="flex items-center justify-between w-full md:hidden absolute bg-white h-14 top-0 z-50">
         <ul className="flex items-center justify-between px-3 w-full">
           <li>
             <Link href={"/"}>
