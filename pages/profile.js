@@ -35,9 +35,9 @@ export default function() {
            </div>
            <div className="mt-9">
             <span className="">
-            <Image src={"/plus.png"} width={200} height={300} alt="icon" className="h-14 w-14 bg-slate-300/60 p-3 rounded-full" />
+            <Image src={"/plus.png"} width={200} height={300} alt="icon" className="h-10 w-10 md:h-14 md:w-14 bg-slate-300/60 p-3 rounded-full" />
             </span>
-            <p className="font-semibold p-2">New</p>
+            <p className="text-sm md:text-base font-semibold p-2">New</p>
            </div>
            <div className="h-0.5 bg-slate-300/70 mt-24"></div>
            <div className="flex items-center justify-center gap-9 py-5">
