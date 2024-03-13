@@ -18,8 +18,8 @@ export default function() {
                 <span className="flex flex-col lg:flex-row gap-2">
                 <h1 className="text-lg md:text-xl font-semibold">John Doe</h1>
                 <span className="flex items-center gap-2 md:ml-4">
-                <button className="bg-slate-300/70 px-3 py-1 rounded-lg  text-xs md:text-base font-semibold">Edit profile</button>
-                <button className="bg-slate-300/70 px-3 py-1 rounded-lg text-xs md:text-base font-semibold">view archieve</button>
+                <button className="bg-slate-200/90 px-3 py-1 rounded-lg  text-xs md:text-base font-semibold">Edit profile</button>
+                <button className="bg-slate-200/90 px-3 py-1 rounded-lg text-xs md:text-base font-semibold">view archieve</button>
                 <Image src={"/setting.png"} width={20} height={20}/>
                 </span></span>
                 <span className="flex items-center gap-7 py-4">
@@ -35,7 +35,7 @@ export default function() {
            </div>
            <div className="mt-9">
             <span className="">
-            <Image src={"/plus.png"} width={200} height={300} alt="icon" className="h-10 w-10 md:h-14 md:w-14 bg-slate-300/60 p-3 rounded-full" />
+            <Image src={"/plus.png"} width={200} height={300} alt="icon" className="h-10 w-10 md:h-14 md:w-14 bg-slate-200/60 p-3 rounded-full" />
             </span>
             <p className="text-sm md:text-base font-semibold p-2">New</p>
            </div>
