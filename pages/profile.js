@@ -10,7 +10,7 @@ export default function() {
         <Sidebar />
         <Footer />
         <div className="md:ml-64 py-8 px-5 md:px-20 my-9">
-           <div className="flex flex-row gap-8">
+           <div className="flex flex-row gap-5 md:gap-8">
             <span>
             <Image src={"/1.png"} width={200} height={200} className="rounded-full w-20 h-20 md:w-28 md:h-28"/>
             </span>
@@ -18,18 +18,18 @@ export default function() {
                 <span className="flex flex-col lg:flex-row gap-2">
                 <h1 className="text-lg md:text-xl font-semibold">John Doe</h1>
                 <span className="flex items-center gap-2 md:ml-4">
-                <button className="bg-slate-300/70 px-3 py-1 rounded-lg  text-sm md:text-base font-semibold">Edit profile</button>
-                <button className="bg-slate-300/70 px-3 py-1 rounded-lg text-sm md:text-base font-semibold">view archieve</button>
+                <button className="bg-slate-300/70 px-3 py-1 rounded-lg  text-xs md:text-base font-semibold">Edit profile</button>
+                <button className="bg-slate-300/70 px-3 py-1 rounded-lg text-xs md:text-base font-semibold">view archieve</button>
                 <Image src={"/setting.png"} width={20} height={20}/>
                 </span></span>
                 <span className="flex items-center gap-7 py-4">
-                    <p className="text-sm md:text-base font-semibold">4 posts</p>
-                    <p className="text-sm md:text-base font-semibold">0 followers</p>
-                    <p className="text-sm md:text-base font-semibold"> 0 following</p>
+                    <p className="text-xs md:text-base font-semibold">4 posts</p>
+                    <p className="text-xs md:text-base font-semibold">0 followers</p>
+                    <p className="text-xs md:text-base font-semibold"> 0 following</p>
                 </span>
                 <span>
-                    <p className="text-sm md:text-base font-semibold">John Doe</p>
-                    <p className="text-sm md:text-base font-semibold">#Mister</p>
+                    <p className="text-xs md:text-base font-semibold">John Doe</p>
+                    <p className="text-xs md:text-base font-semibold">#Mister</p>
                 </span>
             </div>
            </div>

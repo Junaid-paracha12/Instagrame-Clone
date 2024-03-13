@@ -268,7 +268,7 @@ export default function Home() {
                 </span>
                 
               </div>
-              <div className="h-0.5 bg-slate-300/60 "></div>
+              <div className="h-0.5 bg-slate-300/60 mt-6"></div>
             </div>
           ))}
           <div className="my-4">
