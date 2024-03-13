@@ -23,13 +23,13 @@ export default function() {
                 <Image src={"/setting.png"} width={20} height={20}/>
                 </span></span>
                 <span className="flex items-center gap-7 py-4">
-                    <p className="font-semibold">4 posts</p>
-                    <p className="font-semibold">0 followers</p>
-                    <p className="font-semibold"> 0 following</p>
+                    <p className="text-sm md:text-base font-semibold">4 posts</p>
+                    <p className="text-sm md:text-base font-semibold">0 followers</p>
+                    <p className="text-sm md:text-base font-semibold"> 0 following</p>
                 </span>
                 <span>
-                    <p className="font-semibold">John Doe</p>
-                    <p className="font-semibold">#Mister</p>
+                    <p className="text-sm md:text-base font-semibold">John Doe</p>
+                    <p className="text-sm md:text-base font-semibold">#Mister</p>
                 </span>
             </div>
            </div>

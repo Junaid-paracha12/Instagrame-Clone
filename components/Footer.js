@@ -19,7 +19,7 @@ export default function Footer() {
           <Image src={"/search.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
           <Image onClick={toggleCreate} src={"/tab.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
           <Image src={"/video.png"} width={20} height={20} className="w-6 h-6" alt="icon" />
-          <Image src={"/1.png"} width={20} height={20} className="w-7 h-7 rounded-full" alt="icon" />
+         <Link href={"profile"}> <Image src={"/1.png"} width={20} height={20} className="w-7 h-7 rounded-full" alt="icon" /></Link>
           
         </div>
       </div>
